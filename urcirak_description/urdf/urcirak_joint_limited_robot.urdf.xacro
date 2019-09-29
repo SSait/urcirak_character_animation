@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro"
+  name="urcirak" >
+
+  <xacro:arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface"/>
+
+  <!-- common stuff -->
+  <xacro:include filename="$(find urcirak_description)/urdf/common.gazebo" />
+
+  <!-- ur5 -->
+  <xacro:include filename="$(find urcirak_description)/urdf/urcirak.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:urcirak_robot joint_limited="true"
+    shoulder_pan_lower_limit="${-pi/5}" shoulder_pan_upper_limit="${pi/5}"
+    shoulder_lift_lower_limit="${-pi/2}" shoulder_lift_upper_limit="${-pi/5}"
+    elbow_joint_lower_limit="${-pi/2}" elbow_joint_upper_limit="${pi/2}"
+    wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${pi}"
+    wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
+    wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"
+    finger_joint_lower_limit="0.04" finger_joint_upper_limit="0.85"
+    transmission_hw_interface="$(arg transmission_hw_interface)"
+  />
+
+  <link name="world" />
+
+  <joint name="world_joint" type="fixed">
+    <parent link="world" />
+    <child link = "base_link" />
+    <origin xyz="0.0 0.0 1.0" rpy="0.0 0.0 0.0" />
+  </joint>
+
+</robot>

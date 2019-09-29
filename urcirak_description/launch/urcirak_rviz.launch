@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="limited" default="true" doc="If true, limits joint range [-PI, PI] on all joints." />
+  <arg name="transmission_hw_interface" default="hardware_interface/PositionJointInterface" />
+
+  <param unless="$(arg limited)" name="robot_description" command="$(find xacro)/xacro --inorder '$(find urcirak_description)/urdf/urcirak_robot.urdf.xacro' transmission_hw_interface:=$(arg transmission_hw_interface)" />
+
+  <param if="$(arg limited)" name="robot_description" command="$(find xacro)/xacro --inorder '$(find urcirak_description)/urdf/urcirak_joint_limited_robot.urdf.xacro' transmission_hw_interface:=$(arg transmission_hw_interface)" />
+
+
+  <!-- send fake joint values -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="use_gui" value="TRUE"/>
+  </node>
+
+  <!-- Combine joint values -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+
+<!-- Show in Rviz   -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find urcirak_description)/launch/urcirak.rviz"/>
+
+
+</launch>

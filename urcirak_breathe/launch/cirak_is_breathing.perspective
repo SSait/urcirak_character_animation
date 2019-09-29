@@ -1,0 +1,155 @@
+{
+  "keys": {},
+  "groups": {
+    "pluginmanager": {
+      "keys": {
+        "running-plugins": {
+          "type": "repr",
+          "repr": "{u'rqt_reconfigure/Param': [1], u'rqt_publisher/Publisher': [1]}"
+        }
+      },
+      "groups": {
+        "plugin__rqt_plot__Plot__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__DataPlotWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'MatPlot'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "autoscroll": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "plot_type": {
+                  "type": "repr",
+                  "repr": "u'1'"
+                },
+                "topics": {
+                  "type": "repr",
+                  "repr": "u'/ur5/shoulder_pan_joint_position_controller/command/data'"
+                },
+                "y_limits": {
+                  "type": "repr",
+                  "repr": "[u'-1.3999735127014687', u'1']"
+                },
+                "x_limits": {
+                  "type": "repr",
+                  "repr": "[u'65.599999999999994', u'66.599999999999994']"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_publisher__Publisher__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__PublisherWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "True"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Message Publisher'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "publishers": {
+                  "type": "repr",
+                  "repr": "u\"[{'type_name': 'std_msgs/Float64', 'topic_name': '/ur5/shoulder_pan_joint_position_controller/command', 'enabled': False, 'rate': 10.0, 'expressions': {u'/ur5/shoulder_pan_joint_controller/command/data': 'sin(i/100)', u'/ur5/shoulder_pan_joint_position_controller/command/data': 'sin(i/100*10)*0.05 -0'}, 'publisher_id': 9, 'counter': 3416}, {'type_name': 'std_msgs/Float64', 'topic_name': '/ur5/finger_joint_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {u'/ur5/finger_joint_position_controller/command/data': '0.85'}, 'publisher_id': 10, 'counter': 343}, {'type_name': 'std_msgs/Float64', 'topic_name': '/ur5/shoulder_lift_joint_position_controller/command', 'enabled': False, 'rate': 10.0, 'expressions': {u'/ur5/shoulder_lift_joint_position_controller/command/data': 'sin(i/100*5)*0.05 -1.3'}, 'publisher_id': 11, 'counter': 3406}, {'type_name': 'std_msgs/Float64', 'topic_name': '/ur5/elbow_joint_position_controller/command', 'enabled': False, 'rate': 10.0, 'expressions': {u'/ur5/elbow_joint_position_controller/command/data': 'sin(i/100*10)*0.051 +0.8'}, 'publisher_id': 12, 'counter': 3402}, {'type_name': 'std_msgs/Float64', 'topic_name': '/ur5/wrist_1_joint_position_controller/command', 'enabled': False, 'rate': 10.0, 'expressions': {u'/ur5/wrist_1_joint_position_controller/command/data': 'cos(i/100*5)*0.1-2.5'}, 'publisher_id': 13, 'counter': 3398}, {'type_name': 'std_msgs/Float64', 'topic_name': '/ur5/wrist_2_joint_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {u'/ur5/wrist_2_joint_position_controller/command/data': '-pi/2'}, 'publisher_id': 14, 'counter': 342}, {'type_name': 'std_msgs/Float64', 'topic_name': '/ur5/wrist_3_joint_position_controller/command', 'enabled': False, 'rate': 1.0, 'expressions': {u'/ur5/wrist_3_joint_position_controller/command/data': '-pi/2'}, 'publisher_id': 15, 'counter': 341}]\""
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_reconfigure__Param__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget___plugincontainer_top_widget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "True"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Dynamic Reconfigure'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "splitter": {
+                  "type": "repr(QByteArray.hex)",
+                  "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000001000000020000012d000002390100000006010000000101')",
+                  "pretty-print": "       - 9     "
+                },
+                "_splitter": {
+                  "type": "repr(QByteArray.hex)",
+                  "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000001000000020000013e000000640100000009010000000201')",
+                  "pretty-print": "       > d     "
+                }
+              },
+              "groups": {}
+            }
+          }
+        }
+      }
+    },
+    "mainwindow": {
+      "keys": {
+        "geometry": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('01d9d0cb000200000000001f0000012c00000555000004190000001f0000012c000005550000041900000000000000000556')",
+          "pretty-print": "       , U     , U      V"
+        },
+        "state": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000000fd000000010000000300000537000002d8fc0100000001fc00000000000005370000022b00fffffffc0100000002fc00000000000005370000022b00fffffffc0200000002fb00000058007200710074005f007000750062006c00690073006800650072005f005f005000750062006c00690073006800650072005f005f0031005f005f005000750062006c006900730068006500720057006900640067006500740100000000000001310000008a00fffffffb0000006c007200710074005f007200650063006f006e006600690067007500720065005f005f0050006100720061006d005f005f0031005f005f005f0070006c007500670069006e0063006f006e007400610069006e00650072005f0074006f0070005f0077006900640067006500740100000135000001a30000010e00fffffffb00000042007200710074005f0070006c006f0074005f005f0050006c006f0074005f005f0031005f005f00440061007400610050006c006f007400570069006400670065007401000002d7000002600000000000000000000005370000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')",
+          "pretty-print": "                   7 +                  Xrqt_publisher__Publisher__1__PublisherWidget          lrqt_reconfigure__Param__1___plugincontainer_top_widget          Brqt_plot__Plot__1__DataPlotWidget                            6MinimizedDockWidgetsToolbar        "
+        }
+      },
+      "groups": {
+        "toolbar_areas": {
+          "keys": {
+            "MinimizedDockWidgetsToolbar": {
+              "type": "repr",
+              "repr": "8"
+            }
+          },
+          "groups": {}
+        }
+      }
+    }
+  }
+}

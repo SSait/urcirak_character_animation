@@ -1,0 +1,26 @@
+breathe_dude:
+  rate: 100
+
+  pivot_1: 0.0
+  range_1: 0.0
+  ampt_1: 1.0
+  
+  pivot_2: 0.4
+  range_2: -0.05
+  ampt_2: 1.0
+  
+  pivot_3: 0.3
+  range_3: 0.03
+  ampt_3: 1.0
+  
+  pivot_4: 0.8
+  range_4: 0.02
+  ampt_4: 1.0
+  
+  pivot_5: 0.5
+  range_5: 0.00
+  ampt_5: 1.0
+  
+  pivot_6: 0.5
+  range_6: 0.0
+  ampt_6: 1.0

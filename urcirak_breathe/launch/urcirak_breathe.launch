@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<launch>
+  <rosparam file="$(find urcirak_breathe)/config/breathing_parameters.yaml" command="load"/>
+  <include file="$(find urcirak_gazebo)/launch/urcirak_b.launch"/>
+
+
+  <!--include file="$(find cirak_control)/launch/cirak_rqt.launch"/-->
+
+  <node name="breathe" pkg="urcirak_breathe" type="breathe_dude" respawn="false" output="screen" />
+
+</launch>
+

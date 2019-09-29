@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <arg name="gui" default="true"/>
+  <arg name="limited" default="true"/>
+  <arg name="sim" default="true"/>
+  <arg name="config" default="true"/>
+
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time"  value="1" />
+    <arg name="pkg"   value="urcirak_gazebo" />
+    <arg name="file"  value="urcirak_m.launch" />
+    <arg name="value" value="limited:=$(arg limited) gui:=$(arg gui)" />
+    <arg name="node_name" value="delay_1" />
+  </include>
+
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time"  value="5" />
+    <arg name="pkg"   value="urcirak_moveit_config" />
+    <arg name="file"  value="urcirak_moveit_planning_execution.launch" />
+    <arg name="value" value="limited:=$(arg limited) sim:=$(arg sim)" />
+    <arg name="node_name" value="delay_2" />
+  </include>
+ 
+  <include file="$(find timed_roslaunch)/launch/timed_roslaunch.launch">
+    <arg name="time"  value="6" />
+    <arg name="pkg"   value="urcirak_moveit_config" />
+    <arg name="file"  value="moveit_rviz.launch" />
+    <arg name="value" value="config:=$(arg config)" />
+    <arg name="node_name" value="delay_3" />
+  </include>
+
+</launch>
+
